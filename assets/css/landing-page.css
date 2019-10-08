@@ -1,0 +1,34 @@
+:root {
+  --primary-dark: #0e5da4;
+  --primary-light: aliceblue;
+  --white: #ffffff;
+  --black: rgba(0, 0, 0, .8);
+  --grey: grey;
+  --border-radius: 10px;
+}
+
+#toggleBtn {
+  display: none;
+}
+
+#landing-page > .categories:nth-child(odd) {
+  background: var(--primary-dark);
+}
+
+#landing-page > .categories:nth-child(even) {
+  background: var(--white);
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.get-started-button {
+  border-radius: var(--border-radius);
+  background: var(--primary-dark);
+}
+
+.get-started-button:hover {
+  background: var(--primary-light);
+}
