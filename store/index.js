@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
 
 export const state = () => ({
 
@@ -21,5 +22,3 @@ export const actions = {
 
 
 }
-
-
