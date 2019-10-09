@@ -1,7 +1,7 @@
 <!-- pages/le_nom_de_ma_page.vue => localhost:3000/le_nom_de_ma_page o-->
 
 <template>
-  <div id="landing-page">
+  <div id="landing-page" >
     <link rel="stylesheet" href="../assets/css/landing-page.css" />
     <section class="categories prout">NAV</section>
     <section class="categories">JUMBOTRON</section>
@@ -90,7 +90,11 @@
 
     <section class="categories" id="ecoFriendlyDevEco">
       <div id="picDevEco">
+<<<<<<< HEAD
         <img src="~/assets/images/pinceauDevEco.jpg" alt />
+=======
+        <img src="~/assets/images/E-Mobility.png" width="600" height="270" alt/>
+>>>>>>> 3f12b20b9e3eaa735c282ee6cd9e5c4b5df3d586
       </div>
       <div id="descDevEco">
         <h4 id="h4DevEco">Respect de la nature</h4>
@@ -112,8 +116,11 @@
 </template>
 
 <script>
+<<<<<<< HEAD
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
+=======
+>>>>>>> 3f12b20b9e3eaa735c282ee6cd9e5c4b5df3d586
 export default {
   data() {
     return {
@@ -133,6 +140,7 @@ export default {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 /* style css section Eco Friendly */
 
 #ecoFriendlyDevEco {
@@ -168,6 +176,14 @@ export default {
     flex-direction: column;
     justify-content: center;
     width: 420px;
+=======
+  /* style css section Eco Friendly */
+
+  
+  #ecoFriendlyDevEco {
+    display: flex;
+    flex-wrap: nowrap;
+>>>>>>> 3f12b20b9e3eaa735c282ee6cd9e5c4b5df3d586
   }
 
   #picDevEco {
@@ -190,16 +206,66 @@ export default {
   #descDevEco h5 {
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
   }
 
   h4 {
     font-size: 1.2em;
   }
+=======
+    margin-top: 20px; 
+  }
+  #h4DevEco {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 425px) {
+    #ecoFriendlyDevEco {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 420px;
+    }
+
+    img {
+      width: 400px;
+      height: 200px;
+      margin-left: 10px;
+    }
+
+    #picDevEco {
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    #descDevEco {
+      display: flex;
+      flex-direction: column;
+      font-size: 0.9em;
+      width: 400px;
+      margin-left: 10px;
+      margin-right: 5px;
+    }
+
+    #descDevEco p, #descDevEco h4, #descDevEco h5  {
+      display: flex;
+      justify-content: center;
+    }
+
+    h4 {
+      font-size: 1.2em;
+    }
+>>>>>>> 3f12b20b9e3eaa735c282ee6cd9e5c4b5df3d586
 
   h5 {
     font-size: 0.8em;
   }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 3f12b20b9e3eaa735c282ee6cd9e5c4b5df3d586
 
 :root {
   --primary-dark: #0e5da4;
