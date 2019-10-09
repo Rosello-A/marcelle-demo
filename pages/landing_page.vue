@@ -108,7 +108,7 @@
         @sliding-end="onSlideEnd"
       >
         <!-- Text slides with image -->
-        <b-carousel-slide img-src="~/assets/images/Photo-commentaire4Blue.png">
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaire4Trans.png">
           <blockquote>"Je suis ULTRA FAN de l’appli !"</blockquote>
           <cite>
             <span class="client-name">Hissa</span>
@@ -116,7 +116,7 @@
         </b-carousel-slide>
 
         <!-- Slides with custom text -->
-        <b-carousel-slide img-src="~/assets/images/Photo-commentaire2Blue.png">
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaire2Trans.png">
           <blockquote>"Je roule vert !"</blockquote>
           <cite>
             <span class="client-name">Jean</span>
@@ -124,14 +124,14 @@
         </b-carousel-slide>
 
         <!-- Slides with image only -->
-        <b-carousel-slide img-src="~/assets/images/Photo-commentaireBlue.png">
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaireTrans.png">
           <blockquote>"Elle est géniale, pratique, parfaite et fonctionnelle."</blockquote>
           <cite>
             <span class="client-name">Pauline</span>
           </cite>
         </b-carousel-slide>
         <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-        <b-carousel-slide img-src="~/assets/images/Photo-commentaire3Blue.png">
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaire3Trans.png">
           <blockquote>"Je trouve cette application stupéfiante !"</blockquote>
           <cite>
             <span class="client-name">Michel</span>
@@ -519,6 +519,10 @@ export default {
 * /Features
 */
 
+#carousel-1 {
+  background: none !important;
+}
+
 .header-section {
   color: var(--white);
 }
@@ -549,7 +553,7 @@ i:last-child {
 }
 
 .carousel-item {
-  background: none;
+  background: none !important;
 }
 /* JUMBOTRON_START*/
 #jumbotronlp {
