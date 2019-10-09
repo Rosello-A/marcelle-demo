@@ -6,9 +6,9 @@
     <section class="categories prout">NAV</section>
     <section class="categories">JUMBOTRON</section>
     <section class="categories">VISUEL+FONCTIONS</section>
-<<<<<<< HEAD
+
     <section class="categories">ECO FRIENDLY</section>
-    <section class="categories">
+    <section class="categories-user-review">
       <!-- USER REVIEW -->
 
       <div id="header-section">
@@ -87,15 +87,16 @@
       </p>
       -->
     </section>
-=======
+
     <section class="categories" id="ecoFriendlyDevEco">
       <div id="picDevEco">
-        <img src="~/assets/images/pinceauDevEco.jpg"  alt/>
+        <img src="~/assets/images/pinceauDevEco.jpg" alt />
       </div>
       <div id="descDevEco">
         <h4 id="h4DevEco">Respect de la nature</h4>
         <h5>Transport</h5>
-        <p>Limiter les dépenses en carburant et réduire les émissions de gaz polluants en utilisant
+        <p>
+          Limiter les dépenses en carburant et réduire les émissions de gaz polluants en utilisant
           les transports électriques.
         </p>
         <h5>Les gestes écologiques sont toujours économiques</h5>
@@ -104,18 +105,13 @@
         <p>Le bien-être sous la forme d'une harmonie avec son environnement naturel.</p>
       </div>
     </section>
-    <section class="categories">USER REVIEW</section>
->>>>>>> 6034b66699d0e4717b604e89c05dbd1d30d584c6
+
     <section class="categories">GET STARTED</section>
     <section class="categories">FOOTER</section>
-    
   </div>
-
-
 </template>
 
 <script>
-<<<<<<< HEAD
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 export default {
@@ -131,99 +127,84 @@ export default {
     },
     onSlideEnd(slide) {
       this.sliding = false
-=======
-<<<<<<< HEAD
-  export default {
-    data() {
-      return {
-        message: ''
-      }
-=======
-export default {
-  data() {
-    return {
-      message: 'Hello le Frioul!'
->>>>>>> 6034b66699d0e4717b604e89c05dbd1d30d584c6
     }
   }
+}
 </script>
 
 <style scoped>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  /* style css section Eco Friendly */
-  
+/* style css section Eco Friendly */
+
+#ecoFriendlyDevEco {
+  display: flex;
+}
+
+#ecoFriendlyDevEco h4 {
+  color: black;
+}
+
+#ecoFriendlyDevEco h5 {
+  color: black;
+}
+
+#ecoFriendlyDevEco p {
+  color: black;
+}
+
+#picDevEco {
+  margin-right: 20px;
+  margin-left: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+#h4DevEco {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 425px) {
   #ecoFriendlyDevEco {
     display: flex;
-  }
-
-  #ecoFriendlyDevEco h4{
-    color: black;
-  }
-
-  #ecoFriendlyDevEco h5{
-    color: black;
-  }
-
-  #ecoFriendlyDevEco p{
-    color: black;
+    flex-direction: column;
+    justify-content: center;
+    width: 420px;
   }
 
   #picDevEco {
-    margin-right: 20px;
-    margin-left: 20px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #descDevEco {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    width: 100%;
+    margin-left: 100px;
+    margin-right: 0;
+  }
+
+  #descDevEco p,
+  #descDevEco h4,
+  #descDevEco h5 {
+    display: flex;
     justify-content: center;
-    margin-top: 20px;
-  }
-  #h4DevEco {
-    margin-bottom: 20px;
-    margin-top: 20px;
   }
 
-  @media screen and (max-width: 425px) {
-    #ecoFriendlyDevEco {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      width: 420px;
-    }
-
-    #picDevEco {
-      width: 100%;
-      margin-left: 0;
-      margin-right: 0;
-    }
-
-    #descDevEco {
-      display: flex;
-      flex-direction: column;
-      font-size: 0.9em;
-      width: 100%;
-      margin-left: 100px;
-      margin-right: 0;
-    }
-
-    #descDevEco p, #descDevEco h4, #descDevEco h5  {
-      display: flex;
-      justify-content: center;
-    }
-
-    h4 {
-      font-size: 1.2em;
-    }
-
-    h5 {
-      font-size: 0.8em;
-    }
+  h4 {
+    font-size: 1.2em;
   }
-=======
->>>>>>> 6034b66699d0e4717b604e89c05dbd1d30d584c6
+
+  h5 {
+    font-size: 0.8em;
+  }
+}
+
 :root {
   --primary-dark: #0e5da4;
-  --primary-light: aliceblue;
+  --primary-light: #eff7ff;
   --white: #ffffff;
-<<<<<<< HEAD
   --black: rgba(0, 0, 0, 0.8);
   --grey: grey;
   --border-radius: 10px;
@@ -237,15 +218,14 @@ export default {
 #landing-page > .categories:nth-child(even) {
   background: var(--white);
 }
-.categories {
+.categories-user-review {
   /*display: flex;
   flex-wrap: wrap;*/
 }
-=======
-  --black: rgba(0, 0, 0, .8);
-  --grey: grey;
-  --border-radius: 10px;
-}
+
+--black: rgba(0, 0, 0, 0.8);
+--grey: grey;
+--border-radius: 10px;
 
 #toggleBtn {
   display: none;
@@ -259,25 +239,14 @@ export default {
   background: var(--white);
 }
 
-.categories {
-  display: flex;
-  flex-wrap: wrap;
-}
-
->>>>>>> 6034b66699d0e4717b604e89c05dbd1d30d584c6
 .get-started-button {
   border-radius: var(--border-radius);
   background: var(--primary-dark);
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> 6034b66699d0e4717b604e89c05dbd1d30d584c6
 .get-started-button:hover {
   background: var(--primary-light);
 }
 
-<<<<<<< HEAD
 .header-section {
   color: var(--white);
 }
@@ -304,8 +273,6 @@ export default {
 i:last-child {
   color: #b1acac;
 }
-=======
->>>>>>> 6034b66699d0e4717b604e89c05dbd1d30d584c6
 </style>
 
 
