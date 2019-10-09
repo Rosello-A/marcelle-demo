@@ -284,8 +284,10 @@ export default {
 }
 /* style css section Eco Friendly */
 
-#ecoFriendlyDevEco {
+#ecoFriendlyDevEco.categories {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
 
 #ecoFriendlyDevEco h4 {
@@ -301,10 +303,9 @@ export default {
 }
 
 #picDevEco {
-  margin-right: 20px;
-  margin-left: 20px;
   justify-content: center;
   margin-top: 20px;
+  width: 45%;
 }
 #h4DevEco {
   margin-bottom: 20px;
@@ -325,7 +326,7 @@ export default {
   }
 
   #picDevEco {
-    width: 100%;
+    width: 45%;
     margin-left: 0;
     margin-right: 0;
   }
@@ -334,7 +335,7 @@ export default {
     display: flex;
     flex-direction: column;
     font-size: 0.9em;
-    width: 400px;
+    width: 45%;
     margin-left: 10px;
     margin-right: 5px;
   }
@@ -539,6 +540,10 @@ export default {
   padding-top: 20px;
   font-size: 1.5em;
   color: white;
+}
+
+.carousel-caption {
+  background: none;
 }
 
 .stars {
