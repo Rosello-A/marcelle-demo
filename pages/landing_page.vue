@@ -1,13 +1,13 @@
 <!-- pages/le_nom_de_ma_page.vue => localhost:3000/le_nom_de_ma_page o-->
 <template>
-  <div id="landing-page">
+  <div id="landing-page" >
     <link rel="stylesheet" href="../assets/css/landing-page.css" />
     <section class="categories prout">NAV</section>
     <section class="categories">JUMBOTRON</section>
     <section class="categories">VISUEL+FONCTIONS</section>
     <section class="categories" id="ecoFriendlyDevEco">
       <div id="picDevEco">
-        <img src="~/assets/images/pinceauDevEco.jpg"  alt/>
+        <img src="~/assets/images/E-Mobility.png" width="600" height="270" alt/>
       </div>
       <div id="descDevEco">
         <h4 id="h4DevEco">Respect de la nature</h4>
@@ -24,32 +24,26 @@
     <section class="categories">USER REVIEW</section>
     <section class="categories">GET STARTED</section>
     <section class="categories">FOOTER</section>
-    
   </div>
 
 
 </template>
 <script>
-<<<<<<< HEAD
-  export default {
-    data() {
-      return {
-        message: ''
-      }
-=======
 export default {
   data() {
     return {
       message: 'Hello le Frioul!'
     }
   }
+}
 </script>
 <style scoped>
-<<<<<<< HEAD
   /* style css section Eco Friendly */
+
   
   #ecoFriendlyDevEco {
     display: flex;
+    flex-wrap: nowrap;
   }
 
   #ecoFriendlyDevEco h4{
@@ -68,7 +62,7 @@ export default {
     margin-right: 20px;
     margin-left: 20px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 20px; 
   }
   #h4DevEco {
     margin-bottom: 20px;
@@ -83,6 +77,12 @@ export default {
       width: 420px;
     }
 
+    img {
+      width: 400px;
+      height: 200px;
+      margin-left: 10px;
+    }
+
     #picDevEco {
       width: 100%;
       margin-left: 0;
@@ -93,9 +93,9 @@ export default {
       display: flex;
       flex-direction: column;
       font-size: 0.9em;
-      width: 100%;
-      margin-left: 100px;
-      margin-right: 0;
+      width: 400px;
+      margin-left: 10px;
+      margin-right: 5px;
     }
 
     #descDevEco p, #descDevEco h4, #descDevEco h5  {
@@ -111,7 +111,7 @@ export default {
       font-size: 0.8em;
     }
   }
-=======
+
 :root {
   --primary-dark: #0e5da4;
   --primary-light: aliceblue;
