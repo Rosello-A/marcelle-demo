@@ -1,9 +1,22 @@
 <!-- pages/le_nom_de_ma_page.vue => localhost:3000/le_nom_de_ma_page o-->
+
 <template>
   <div id="landing-page">
     <link rel="stylesheet" href="../assets/css/landing-page.css" />
-    <section class="categories prout">NAV</section>
-    <section class="categories">JUMBOTRON</section>
+    <section id="jumbotronlp" class="categories">
+      <div id="nav">
+        <img src="~/assets/images/grandmother_logo2.png" alt="visuel de l'application en service" />
+        <h1>MARCELLE - MOBI</h1>
+      </div>
+      <div id="imgjumbo">
+        <img src="~/assets/images/iPhone-11InUse.png" alt="visuel de l'application en service" />
+      </div>
+
+      <div id="description">
+        <h2>Faites les meilleurs choix pour vous déplacer</h2>
+        <p></p>
+      </div>
+    </section>
     <section id="features" class="categories">
       <div id="features-slider">
         <img src="/_nuxt/assets/images/features/ihoneMockUp.png" />
@@ -62,15 +75,141 @@
         </ul>
       </div>
     </section>
-    <section class="categories">ECO FRIENDLY</section>
-    <section class="categories">USER REVIEW</section>
-    <section class="categories">GET STARTED</section>
-    <section class="categories">FOOTER</section>
+    <section class="categories-user-review">
+      <!-- USER REVIEW -->
+
+      <div id="header-section">
+        <h3 class="title small">Avis des utilisateurs</h3>
+      </div>
+      <div class="textwidget custom-html-widget">
+        4.7 étoiles
+        <span class="dot">•</span>
+        200 000 avis
+      </div>
+
+      <div class="stars">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+      </div>
+      <b-carousel
+        id="carousel-1"
+        v-model="slide"
+        :interval="4000"
+        controls
+        indicators
+        background="#ababab"
+        img-width="1024"
+        img-height="480"
+        style="text-shadow: 1px 1px 2px #333;"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+        <!-- Text slides with image -->
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaire4Blue.png">
+          <blockquote>"Je suis ULTRA FAN de l’appli !"</blockquote>
+          <cite>
+            <span class="client-name">Hissa</span>
+          </cite>
+        </b-carousel-slide>
+
+        <!-- Slides with custom text -->
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaire2Blue.png">
+          <blockquote>"Je roule vert !"</blockquote>
+          <cite>
+            <span class="client-name">Jean</span>
+          </cite>
+        </b-carousel-slide>
+
+        <!-- Slides with image only -->
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaireBlue.png">
+          <blockquote>"Elle est géniale, pratique, parfaite et fonctionnelle."</blockquote>
+          <cite>
+            <span class="client-name">Pauline</span>
+          </cite>
+        </b-carousel-slide>
+        <!-- Slide with blank fluid image to maintain slide aspect ratio -->
+        <b-carousel-slide img-src="~/assets/images/Photo-commentaire3Blue.png">
+          <blockquote>"Je trouve cette application stupéfiante !"</blockquote>
+          <cite>
+            <span class="client-name">Michel</span>
+          </cite>
+        </b-carousel-slide>
+      </b-carousel>
+
+      <!--    <p class="mt-4">
+        Slide #: {{ slide }}
+        <br />
+        Sliding: {{ sliding }}
+      </p>
+      -->
+    </section>
+
+    <section class="categories" id="ecoFriendlyDevEco">
+      <div id="picDevEco">
+        <img src="~/assets/images/E-Mobility.png" width="600" height="270" alt />
+      </div>
+      <div id="descDevEco">
+        <h4 id="h4DevEco">Respect de la nature</h4>
+        <h5>Transport</h5>
+        <p>
+          Limiter les dépenses en carburant et réduire les émissions de gaz polluants en utilisant
+          les transports électriques.
+        </p>
+        <h5>Les gestes écologiques sont toujours économiques</h5>
+        <p>Moins gâcher, c'est moins dépenser. On a tout à y gagner.</p>
+        <h5>Préserver l'environnement, c'est bon pour la santé</h5>
+        <p>Le bien-être sous la forme d'une harmonie avec son environnement naturel.</p>
+      </div>
+    </section>
+
+    <section id="getStart" class="categories">
+      <h2>Lancez-vous !</h2>
+      <a
+        href="/map"
+        class="btn btn-dark-blue btn-primary rounded-pill"
+        target="_self"
+      >Trouver un moyen de transport</a>
+      <hr />
+    </section>
+    <footer id="footer" class="categories">
+      <div id="logoFooter">
+        <img src="~/assets/images/grandmother_logo2.png" alt="logo marcelle-mobi" />
+      </div>
+      <div>
+        <h4>A propos</h4>
+        <a href="#">Question?</a>
+        <a href="#">Mentions légales</a>
+      </div>
+
+      <div>
+        <h4>Nous contacter</h4>
+        <a href="#">Presse</a>
+        <a href="#">Signalement</a>
+      </div>
+    </footer>
   </div>
 </template>
+
 <script>
+import Vue from 'vue'
+import BootstrapVue from 'bootstrap-vue'
 export default {
+  data() {
+    return {
+      slide: 0,
+      sliding: null
+    }
+  },
   methods: {
+    onSlideStart(slide) {
+      this.sliding = true
+    },
+    onSlideEnd(slide) {
+      this.sliding = false
+    },
     showFeature(element) {
       const descriptions = document.getElementsByClassName(
         'features-descriptions'
@@ -100,30 +239,21 @@ export default {
           firstSlide.style.marginLeft = '-300%'
           break
       }
-
-      // if (element.originalTarget.id === 'navbar-map-feature') {
-      //   firstSlide.style.marginLeft = '0%'
-      // }
-      // if (element.originalTarget.id === 'elec-car-feature') {
-      //   firstSlide.style.marginLeft = '-100%'
-      // }
-      // if (element.originalTarget.id === 'navbar-map-feature') {
-      //   firstSlide.style.marginLeft = '-200%'
-      // }
-      // if (element.originalTarget.id === 'navbar-map-feature') {
-      //   firstSlide.style.marginLeft = '-300%'
-      // }
     }
   }
 }
 // Features
 // features
 </script>
+
 <style scoped>
 :root {
   --primary-dark: #0e5da4;
-  --primary-light: aliceblue;
+  --primary-light: #eff7ff;
   --white: #ffffff;
+  --black: rgba(0, 0, 0, 0.8);
+  --grey: grey;
+  --border-radius: 10px;
   --black: rgba(0, 0, 0, 0.8);
   --grey: grey;
   --border-radius: 10px;
@@ -132,8 +262,10 @@ export default {
 #toggleBtn {
   display: none;
 }
-
 #landing-page > .categories:nth-child(even) {
+  background: var(--primary-dark);
+}
+#landing-page > .categories:nth-child(odd) {
   background: var(--white);
 }
 
@@ -147,9 +279,80 @@ export default {
   border-radius: var(--border-radius);
   background: var(--primary-dark);
 }
-
 .get-started-button:hover {
   background: var(--primary-light);
+}
+/* style css section Eco Friendly */
+
+#ecoFriendlyDevEco {
+  display: flex;
+}
+
+#ecoFriendlyDevEco h4 {
+  color: var(--primary-dark);
+}
+
+#ecoFriendlyDevEco h5 {
+  color: black;
+}
+
+#ecoFriendlyDevEco p {
+  color: black;
+}
+
+#picDevEco {
+  margin-right: 20px;
+  margin-left: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+#h4DevEco {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 425px) {
+  #ecoFriendlyDevEco {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 420px;
+  }
+
+  img {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  #picDevEco {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #descDevEco {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 5px;
+  }
+
+  #descDevEco p,
+  #descDevEco h4,
+  #descDevEco h5 {
+    display: flex;
+    justify-content: center;
+  }
+
+  h4 {
+    font-size: 1.2em;
+  }
+
+  h5 {
+    font-size: 0.8em;
+  }
 }
 
 /**
@@ -286,6 +489,7 @@ export default {
   #features {
     padding: 2rem;
     justify-content: space-around;
+    align-items: center;
   }
 
   #features > div:first-child,
@@ -314,4 +518,184 @@ export default {
 /**
 * /Features
 */
+
+.header-section {
+  color: var(--white);
+}
+
+.title.small {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.textwidget.custom-html-widget {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.stars {
+  text-align: center;
+  padding-top: 20px;
+  color: #ffeb3b;
+  font-size: 2em;
+}
+
+i:last-child {
+  color: #b1acac;
+}
+
+.carousel-item {
+  background: none;
+}
+/* JUMBOTRON_START*/
+#jumbotronlp {
+  overflow: hidden;
+  width: 100vw;
+  height: auto;
+  padding: 0;
+  height: 100vh;
+}
+
+#nav {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+#nav h1 {
+  font-size: 1.5em;
+}
+#nav img {
+  width: 6%;
+}
+
+#nav h1 {
+  color: #0e5da4;
+}
+
+#imgjumbo {
+  width: 100%;
+}
+
+#imgjumbo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  z-index: 0;
+}
+
+#description {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
+#description h2 {
+  position: absolute;
+  top: 15rem;
+  right: 5rem;
+  width: 30%;
+}
+/* JUMBOTRON_END */ /* Get Start_START */
+#getStart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#getStart a {
+  width: 330px;
+  height: 40px;
+}
+
+#getStart > * {
+  margin: 20px 0 20px 0;
+}
+
+#getStart > h2 {
+  color: white;
+}
+
+/* Get Start_END */ /* FOOTER_START */
+footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: space-around;
+  padding: 20px;
+}
+
+footer > * {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer #logoFooter {
+  display: flex;
+  justify-content: center;
+}
+
+footer h4 {
+  color: black;
+  padding-top: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: #0e5da4;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+#logoFooter {
+  width: 25%;
+}
+
+#logoFooter img {
+  width: 50%;
+  margin: auto;
+}
+@media screen and (max-width: 425px) {
+  footer {
+    width: 425px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #nav img {
+    width: 12%;
+  }
+
+  #description h2 {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  #getStart,
+  #description img {
+    width: 425px;
+  }
+
+  #jumbotron {
+    width: 100%;
+  }
+}
+/* FOOTER_END
+ */
 </style>
