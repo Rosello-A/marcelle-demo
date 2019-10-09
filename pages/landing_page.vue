@@ -19,19 +19,19 @@
     </section>
     <section id="features" class="categories">
       <div id="features-slider">
-        <img src="/_nuxt/assets/images/features/ihoneMockUp.png" />
+        <img src="~/assets/images/features/ihoneMockUp.png" />
         <ul>
           <li id="features-slider-1">
-            <img src="/_nuxt/assets/images/features/feature1.png" />
+            <img src="~/assets/images/features/feature1.png" />
           </li>
           <li>
-            <img src="/_nuxt/assets/images/features/feature2.png" />
+            <img src="~/assets/images/features/feature2.png" />
           </li>
           <li>
-            <img src="/_nuxt/assets/images/features/feature3.png" />
+            <img src="~/assets/images/features/feature3.png" />
           </li>
           <li>
-            <img src="/_nuxt/assets/images/features/feature4.png" />
+            <img src="~/assets/images/features/feature4.png" />
           </li>
         </ul>
       </div>
@@ -40,19 +40,19 @@
         <ul id="features-list">
           <li class="features">
             <div id="navbar-map-feature" class="click-zone" @click="showFeature"></div>
-            <img src="/_nuxt/assets/images/navbarMap.svg" />
+            <img src="~/assets/images/navbarMap.svg" />
           </li>
           <li class="features">
             <div id="elec-car-feature" class="click-zone" @click="showFeature"></div>
-            <img src="/_nuxt/assets/images/elec_car.svg" />
+            <img src="~/assets/images/elec_car.svg" />
           </li>
           <li class="features">
             <div id="navbar-marius-feature" class="click-zone" @click="showFeature"></div>
-            <img src="/_nuxt/assets/images/navbarMarius.svg" />
+            <img src="~/assets/images/navbarMarius.svg" />
           </li>
           <li class="features">
             <div id="navbar-blog-feature" class="click-zone" @click="showFeature"></div>
-            <img src="/_nuxt/assets/images/navbarBlog.svg" />
+            <img src="~/assets/images/navbarBlog.svg" />
           </li>
         </ul>
         <ul id="features-descriptions-list">
